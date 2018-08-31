@@ -40,3 +40,9 @@ section {
     flex: 1;
     background: skyblue;
 }
+
+.title {
+    width: 200px;
+    height: 30px;
+    background: blue;
+}
