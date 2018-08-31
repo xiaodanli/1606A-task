@@ -29,3 +29,8 @@ footer {
     height: 44px;
     background: pink;
 }
+
+section {
+    flex: 1;
+    background: skyblue;
+}
