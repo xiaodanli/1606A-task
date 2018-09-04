@@ -35,6 +35,97 @@ header {
 
 .con .buttom {
   flex: 1;
+  background: #eee;
+  overflow-y: auto;
+}
+
+.con .buttom p {
+  width: 100%;
+  text-align: center;
+  line-height: 45px;
+}
+
+.con .buttom .list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.con .buttom .list dl {
+  width: 49%;
+  height: 200px;
+  background: #fff;
+  margin-top: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.con .buttom .list dl dt {
+  width: 100%;
+  height: 60%;
+  text-align: center;
+}
+
+.con .buttom .list dl dt img {
+  width: 100%;
+}
+
+.con .buttom .list dl dd {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.con .buttom .list dl dd p.title {
+  line-height: 30px;
+  width: 100%;
+  text-align: left;
+}
+
+.con .buttom .list dl dd p.title span {
+  margin-right: 5px;
+  padding: 0 5px;
+  border: 1px solid #ccc;
+}
+
+.con .buttom .list dl dd .sentence {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.con .buttom .list dl dd .sentence p {
+  width: auto;
+  color: #f44336;
+}
+
+.con .buttom .list dl dd .sentence p b {
+  font-size: 16px;
+}
+
+.con .buttom .list dl dd .sentence p span {
+  color: #666;
+  border: none;
+  text-decoration: line-through;
+}
+
+.con .buttom .list dl dd .sentence span {
+  color: #666;
+  border: 1px solid #ccc;
+}
+
+.con .buttom .list dl dd p.coutent {
+  text-align: right;
+  flex: 1;
+  line-height: 20px;
+  color: #666;
 }
 
 footer {
