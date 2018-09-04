@@ -42,12 +42,12 @@
                         <div class="swiper-slide"><img src="./image/5.jpeg"></div>
                         <div class="swiper-slide"><img src="./image/4.jpg"></div>
                     </div>
-                    <!-- Add Pagination -->
+
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
             <div class="buttom">
-                <!--<p>-精选单品-</p>
+                <p>-精选单品-</p>
                 <div class="list">
                     <dl>
                         <dt>
@@ -61,10 +61,100 @@
                             </div>
                             <p class="coutent">谨慎2天</p>
                         </dd>
-                    </dl>      
-                </div> -->
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="image/1.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <p class="title"><span>天猫</span>吧啦吧啦</p>
+                            <div class="sentence">
+                                <p>￥<b>12</b><span>￥4.3</span></p>
+                                <span>卷减3元</span>
+                            </div>
+                            <p class="coutent">谨慎2天</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="image/1.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <p class="title"><span>天猫</span>吧啦吧啦</p>
+                            <div class="sentence">
+                                <p>￥<b>12</b><span>￥4.3</span></p>
+                                <span>卷减3元</span>
+                            </div>
+                            <p class="coutent">谨慎2天</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="image/1.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <p class="title"><span>天猫</span>吧啦吧啦</p>
+                            <div class="sentence">
+                                <p>￥<b>12</b><span>￥4.3</span></p>
+                                <span>卷减3元</span>
+                            </div>
+                            <p class="coutent">谨慎2天</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="image/1.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <p class="title"><span>天猫</span>吧啦吧啦</p>
+                            <div class="sentence">
+                                <p>￥<b>12</b><span>￥4.3</span></p>
+                                <span>卷减3元</span>
+                            </div>
+                            <p class="coutent">谨慎2天</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="image/1.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <p class="title"><span>天猫</span>吧啦吧啦</p>
+                            <div class="sentence">
+                                <p>￥<b>12</b><span>￥4.3</span></p>
+                                <span>卷减3元</span>
+                            </div>
+                            <p class="coutent">谨慎2天</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="image/1.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <p class="title"><span>天猫</span>吧啦吧啦</p>
+                            <div class="sentence">
+                                <p>￥<b>12</b><span>￥4.3</span></p>
+                                <span>卷减3元</span>
+                            </div>
+                            <p class="coutent">谨慎2天</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="image/1.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <p class="title"><span>天猫</span>吧啦吧啦</p>
+                            <div class="sentence">
+                                <p>￥<b>12</b><span>￥4.3</span></p>
+                                <span>卷减3元</span>
+                            </div>
+                            <p class="coutent">谨慎2天</p>
+                        </dd>
                     </dl>
                 </div>
+                </dl>
             </div>
         </div>
         <footer>
@@ -94,10 +184,10 @@
     </div>
 
 </body>
-<script src="libs/jquery.min.js"></script>
-<script src="js/index.js"></script>
-<script src="libs/swiper-4.2.2.min.js"></script>
-<script src="libs/better-scroll.js"></script>
+<script src="./libs/jquery.min.js"></script>
+<!-- <script src="js/index.js"></script> -->
+<script src="./libs/swiper-4.2.2.min.js"></script>
+<script src="./libs/better-scroll.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 3,
@@ -118,35 +208,6 @@
 
 
     });
-
-    $.ajax({
-        url:'./data/buttom.json',
-        success:function(data){
-            var data=JSON.parse(data);
-            Llist(data);
-        }
-    })
-
-    function Llist(data){
-        var str='<p>'+data['title']+'</p><div class="list">';
-        data['buttom'].forEach(function(v){
-            str+=`<dl>
-                    <dt>
-                        <img src="image/${v.imgs}" alt="">
-                    </dt>
-                    <dd>
-                        <p class="title"><span>${v.store}</span>${v.product}</p> 
-                        <div class="sentence">
-                            <p>￥<b>${v.nPrice}</b><span>￥${v.oPrice}</span></p> 
-                            <span>卷减${v.dPrice}元</span>
-                        </div>
-                        <p class="coutent">${v.lastSen}</p>
-                    </dd>
-                </dl>`
-        })
-        str+='</div>';
-        $('.buttom').html(str);
-    }
-
 </script>
+
 </html>
