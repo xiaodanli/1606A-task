@@ -31,7 +31,7 @@ gulp.task('minjs', function() {
 gulp.task('devserver', function() {
         return gulp.src('./src')
             .pipe(server({
-                port: 8080,
+                port: 7876,
                 middleware: function(req, res, next) {
                     var pathname = url.parse(req.url).pathname;
                     if (pathname === "/favicon.ico") {

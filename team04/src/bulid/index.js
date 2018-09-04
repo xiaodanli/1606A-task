@@ -1,1 +1,1 @@
-$(function(){new Swiper(".swiper-container",{pagination:{el:".swiper-pagination"}})});
+$(function(){new Swiper(".swiper-container",{pagination:{el:".swiper-pagination"}});var e=document.querySelector(".headerlist"),i=e.children[0].offsetWidth,n=e.children.length;e.style.width=i*n+"px";new BScroll("#header",{scrollX:!0})});
