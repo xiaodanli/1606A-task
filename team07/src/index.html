@@ -11,7 +11,21 @@
 
 <body>
     <div class="wrap">
-        <header>头部
+        <header class="header">
+            <h3>全场包邮 低至5元</h3>
+            <div class="scrolls">
+                <ul class="list">
+                    <li class="active">推荐</li>
+                    <li>女装</li>
+                    <li>美食</li>
+                    <li>居家</li>
+                    <li>美妆</li>
+                    <li>男装</li>
+                    <li>内衣</li>
+                    <li>鞋帽</li>
+                </ul>
+            </div>
+
         </header>
         <div class="con">
             <div class="top">
@@ -25,6 +39,18 @@
             脚步
         </footer>
     </div>
+    <script src="./libs/better-scroll.js"></script>
+    <script src="./libs/jquery.min.js"></script>
+    <script>
+        new BScroll('.header>div', {
+            click: true,
+            scrollX: true
+        });
+        $('.list li').on('click', function() {
+            var ind = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    </script>
 </body>
 
 </html>

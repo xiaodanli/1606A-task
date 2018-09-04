@@ -19,7 +19,38 @@ body {
 
 header {
     width: 100%;
-    height: 50px;
+    height: 60px;
+    overflow: hidden;
+    h3 {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        text-align: center;
+        color: #d57e90;
+    }
+    .scrolls {
+        width: 100%;
+        height: 30px;
+        .list {
+            width: 400px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            li {
+                flex: 1;
+                height: 100%;
+                font-size: 12px;
+                text-align: center;
+                line-height: 30px;
+                margin: 0 10px;
+            }
+            li.active {
+                color: #d57e90;
+                border-bottom: 2px solid #d57e90;
+            }
+        }
+    }
 }
 
 .con {
