@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/index.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="con">
+                <ul class='list'>
+                    <li>推荐</li>
+                    <li>女装</li>
+                    <li>男装</li>
+                    <li>内衣</li>
+                    <li>居家</li>
+                    <li>内衣</li>
+                    <li>鞋</li>
+                    <li>没事</li>
+                    <li>美食</li>
+                    <li>甜食</li>
+                    <li>豆制</li>
+                    <li>猪</li>
+                    <li>女装</li>
+                    <li>男装</li>
+                    <li>内衣</li>
+                    <li>居家</li>
+                    <li>内衣</li>
+                    <li>鞋</li>
+                    <li>没事</li>
+                    <li>美食</li>
+                    <li>甜食</li>
+                </ul>
+            </div>
+        </header>
+        <section>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="./js/common/jquery-1.8.3.min.js"></script>
+    <script src="./js/common/better-scroll.js"></script>
+    <script>
+        var scroll = new BScroll('.con', {
+            scrollX: true,
+            click: true
+        })
+    </script>
+</body>
+
+</html>
