@@ -32,10 +32,110 @@ header {
     }
     .buttom {
         flex: 1;
+        background: #eee;
+        overflow-y: auto;
+        p{
+            width: 100%;
+            text-align: center;
+            line-height: 45px;
+        }
+        .list{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-size: 14px;
+            dl{
+                width: 49%;
+                height: 200px;
+                background: #fff;
+                margin-top: 5px;
+                padding: 5px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                dt{
+                    width: 100%;
+                    height: 60%;
+                    text-align: center;
+                    img{
+                        width: 100%;
+                    }
+                }
+                dd{
+                    width: 100%;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    p.title{
+                        line-height: 30px;
+                        width: 100%;
+                        text-align: left;
+                        span{
+                            margin-right: 5px;
+                            padding: 0 5px;
+                            border: 1px solid #ccc;
+                        }
+                    }
+                    .sentence{
+                        width: 100%;
+                        height: 40%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        p{
+                            width: auto;
+                            color: #f44336;
+                            b{
+                                font-size: 16px;
+                            }
+                            span{
+                                color: #666;
+                                border: none;
+                                text-decoration: line-through;
+                            }
+                        }
+                        span{
+                            color: #666;
+                            border: 1px solid #ccc;
+                        }
+                    }
+                    p.coutent{
+                        text-align: right;
+                        flex: 1;
+                        line-height: 20px;
+                        color: #666;
+                    }
+                }
+            }
+        }
     }
 }
 
 footer {
     width: 100%;
     height: 50px;
+    .footerlist {
+        width: 100%;
+        height: 50px;
+        display: flex;
+    }
+    dl {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        dt {
+            .iconfont {
+                font-size: 22px;
+            }
+        }
+        dd {
+            font-size: 14px;
+        }
+    }
+    .ac {
+        color: pink;
+    }
 }
