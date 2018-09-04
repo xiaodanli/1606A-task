@@ -17,14 +17,14 @@
             <h3>全场包邮 低至5元</h3>
             <div class="scrolls">
                 <ul class="list">
-                    <li class="active">推荐</li>
+                    <!-- <li class="active">推荐</li>
                     <li>女装</li>
                     <li>美食</li>
                     <li>居家</li>
                     <li>美妆</li>
                     <li>男装</li>
                     <li>内衣</li>
-                    <li>鞋帽</li>
+                    <li>鞋帽</li> -->
                 </ul>
             </div>
 
@@ -49,7 +49,7 @@
             <div class="buttom">
                 <p>-精选单品-</p>
                 <div class="list">
-                    <dl>
+                    <!-- <dl>
                         <dt>
                             <img src="image/1.jpg" alt="">
                         </dt>
@@ -61,100 +61,8 @@
                             </div>
                             <p class="coutent">谨慎2天</p>
                         </dd>
-                    </dl>
-                    <dl>
-                        <dt>
-                            <img src="image/1.jpg" alt="">
-                        </dt>
-                        <dd>
-                            <p class="title"><span>天猫</span>吧啦吧啦</p>
-                            <div class="sentence">
-                                <p>￥<b>12</b><span>￥4.3</span></p>
-                                <span>卷减3元</span>
-                            </div>
-                            <p class="coutent">谨慎2天</p>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>
-                            <img src="image/1.jpg" alt="">
-                        </dt>
-                        <dd>
-                            <p class="title"><span>天猫</span>吧啦吧啦</p>
-                            <div class="sentence">
-                                <p>￥<b>12</b><span>￥4.3</span></p>
-                                <span>卷减3元</span>
-                            </div>
-                            <p class="coutent">谨慎2天</p>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>
-                            <img src="image/1.jpg" alt="">
-                        </dt>
-                        <dd>
-                            <p class="title"><span>天猫</span>吧啦吧啦</p>
-                            <div class="sentence">
-                                <p>￥<b>12</b><span>￥4.3</span></p>
-                                <span>卷减3元</span>
-                            </div>
-                            <p class="coutent">谨慎2天</p>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>
-                            <img src="image/1.jpg" alt="">
-                        </dt>
-                        <dd>
-                            <p class="title"><span>天猫</span>吧啦吧啦</p>
-                            <div class="sentence">
-                                <p>￥<b>12</b><span>￥4.3</span></p>
-                                <span>卷减3元</span>
-                            </div>
-                            <p class="coutent">谨慎2天</p>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>
-                            <img src="image/1.jpg" alt="">
-                        </dt>
-                        <dd>
-                            <p class="title"><span>天猫</span>吧啦吧啦</p>
-                            <div class="sentence">
-                                <p>￥<b>12</b><span>￥4.3</span></p>
-                                <span>卷减3元</span>
-                            </div>
-                            <p class="coutent">谨慎2天</p>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>
-                            <img src="image/1.jpg" alt="">
-                        </dt>
-                        <dd>
-                            <p class="title"><span>天猫</span>吧啦吧啦</p>
-                            <div class="sentence">
-                                <p>￥<b>12</b><span>￥4.3</span></p>
-                                <span>卷减3元</span>
-                            </div>
-                            <p class="coutent">谨慎2天</p>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>
-                            <img src="image/1.jpg" alt="">
-                        </dt>
-                        <dd>
-                            <p class="title"><span>天猫</span>吧啦吧啦</p>
-                            <div class="sentence">
-                                <p>￥<b>12</b><span>￥4.3</span></p>
-                                <span>卷减3元</span>
-                            </div>
-                            <p class="coutent">谨慎2天</p>
-                        </dd>
-                    </dl>
+                    </dl> -->
                 </div>
-                </dl>
             </div>
         </div>
         <footer>
@@ -185,10 +93,58 @@
 
 </body>
 <script src="./libs/jquery.min.js"></script>
-<!-- <script src="js/index.js"></script> -->
 <script src="./libs/swiper-4.2.2.min.js"></script>
 <script src="./libs/better-scroll.js"></script>
 <script>
+    $.ajax({
+        url: "/api/list",
+        dataType: "json",
+        success: function(res) {
+            console.log(res)
+            var str = ""
+            res.data.forEach(function(v) {
+                str += `<li>${v.title}</li>`
+            })
+            $(".scrolls .list").html(str)
+            new BScroll('.header>div', {
+                click: true,
+                scrollX: true
+            });
+
+            $('.scrolls>ul li').on('click', function() {
+                var ind = $(this).index();
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+        }
+    })
+    $.ajax({
+        url: "/api/buttom",
+        dataType: "json",
+        success: function(res) {
+            console.log(res)
+            var str = ""
+            res.data.forEach(function(v) {
+                str += ` <dl>
+                        <dt>
+                            <img src="image/${v.imgs}" alt="">
+                        </dt>
+                        <dd>
+                            <p class="title"><span>${v.store}</span>${v.product}</p>
+                            <div class="sentence">
+                                <p>￥<b>${v.nPrice}</b><span>￥${v.oPrice}</span></p>
+                                <span>卷减${v.dPrice}元</span>
+                            </div>
+                            <p class="coutent">${v.lastSen}</p>
+                        </dd>
+                    </dl>`
+            })
+            $(".buttom .list").html(str)
+            new BScroll('.header>div', {
+                click: true,
+                scrollX: true
+            });
+        }
+    })
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 3,
         spaceBetween: 30,
@@ -197,16 +153,9 @@
             clickable: true,
         }
     });
-    new BScroll('.header>div', {
-        click: true,
-        scrollX: true
-    });
-    $('.list li').on('click', function() {
-        var ind = $(this).index();
-        $(this).addClass('active').siblings().removeClass('active');
 
-
-
+    $('.footerlist dl').on('click', function() {
+        $(this).addClass('ac').siblings().removeClass('ac');
     });
 </script>
 
