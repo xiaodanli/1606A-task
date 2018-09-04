@@ -7,6 +7,8 @@ var fs = require('fs');
 var path = require('path');
 var url = require('url');
 
+var data = require("./mock/list.json")
+
 var server = require('gulp-webserver');
 // console.log(searchjson);
 //编译sass  压缩
@@ -37,6 +39,9 @@ gulp.task('devserver', function() {
                     if (pathname === "/favicon.ico") {
                         res.end("");
                         return;
+                    }
+                    if (pathname === "/api/list") {
+                        res.end(JSON.stringify({ code: 1, data: data }))
                     }
                     if (pathname === "/") {
                         res.end(fs.readFileSync(path.join(__dirname, "src", "index.html")))

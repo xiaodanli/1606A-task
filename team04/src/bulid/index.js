@@ -1,1 +1,1 @@
-$(function(){new Swiper(".swiper-container",{pagination:{el:".swiper-pagination"}})});
+$(function(){new Swiper(".swiper-container",{pagination:{el:".swiper-pagination"}});$.ajax({url:"/api/list",dataType:"json",success:function(i){if(console.log(i),1===i.code){var n="";i.data.forEach(function(i){n+="<li><img src="+i.img+"><p>"+i.p+"</p><p>"+i.em+"</p></li>"}),$(".listl").html(n)}}})});
