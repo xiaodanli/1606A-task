@@ -1,1 +1,0 @@
-$(function(){new Bscroll(".list")});

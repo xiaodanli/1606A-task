@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./scss/index.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./js/common/swiper-4.1.6.min.css">
 </head>
 
 <body>
@@ -24,36 +25,129 @@
                     <li>没事</li>
                     <li>美食</li>
                     <li>甜食</li>
-                    <li>豆制</li>
-                    <li>猪</li>
-                    <li>女装</li>
-                    <li>男装</li>
-                    <li>内衣</li>
                     <li>居家</li>
-                    <li>内衣</li>
-                    <li>鞋</li>
-                    <li>没事</li>
-                    <li>美食</li>
-                    <li>甜食</li>
+
                 </ul>
             </div>
         </header>
         <section>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
+            <div class="banner swiper-container">
+                <div class="swiper-wrapper list">
                     <div class="swiper-slide">
-                        <img src="./img/1.jpg" alt="">
+                        <dl>
+                            <dd><img src="./img/2.jpg" alt=""></dd>
+                            <dt>
+                                <p>强力挂钩24个</p>
+                               <font>￥10.8</font>
+                            </dt>
+                        </dl>
+                        <dl>
+                            <dd><img src="./img/2.jpg" alt=""></dd>
+                            <dt>
+                                <p>强力挂钩24个</p>
+                                  <font>￥10.8</font>
+                            </dt>
+                        </dl>
+                        <dl>
+                            <dd><img src="./img/2.jpg" alt=""></dd>
+                            <dt>
+                                <p>强力挂钩24个</p>
+                                   <font>￥10.8</font>
+                            </dt>
+                        </dl>
+                    </div>
+                    <div class="swiper-slide">
+                        <dl>
+                            <dd><img src="./img/2.jpg" alt=""></dd>
+                            <dt>
+                                <p>强力挂钩24个</p>
+                                  <font>￥10.8</font>
+                            </dt>
+                        </dl>
+                        <dl>
+                            <dd><img src="./img/2.jpg" alt=""></dd>
+                            <dt>
+                                <p>强力挂钩24个</p>
+                                  <font>￥10.8</font>
+                            </dt>
+                        </dl>
+                        <dl>
+                            <dd><img src="./img/2.jpg" alt=""></dd>
+                            <dt>
+                                <p>强力挂钩24个</p>
+                                   <font>￥10.8</font>
+                            </dt>
+                        </dl>
+                    </div>
+                    <div class="swiper-slide">
+                        <dl>
+                            <dd><img src="./img/2.jpg" alt=""></dd>
+                            <dt>
+                                <p>强力挂钩24个</p>
+                               <font>￥10.8</font>
+                            </dt>
+                        </dl>
+                        <dl>
+                            <dd><img src="./img/2.jpg" alt=""></dd>
+                            <dt>
+                                <p>强力挂钩24个</p>
+                                  <font>￥10.8</font>
+                            </dt>
+                        </dl>
+                        <dl>
+                            <dd><img src="./img/2.jpg" alt=""></dd>
+                            <dt>
+                                <p>强力挂钩24个</p>
+                                   <font>￥10.8</font>
+                            </dt>
+                        </dl>
+                    </div>
+                    <div class="swiper-slide">
+                        <dl>
+                            <dd><img src="./img/2.jpg" alt=""></dd>
+                            <dt>
+                                <p>强力挂钩24个</p>
+                               <font>￥10.8</font>
+                            </dt>
+                        </dl>
+                        <dl>
+                            <dd><img src="./img/2.jpg" alt=""></dd>
+                            <dt>
+                                <p>强力挂钩24个</p>
+                                  <font>￥10.8</font>
+                            </dt>
+                        </dl>
+                        <dl>
+                            <dd><img src="./img/2.jpg" alt=""></dd>
+                            <dt>
+                                <p>强力挂钩24个</p>
+                                   <font>￥10.8</font>
+                            </dt>
+                        </dl>
                     </div>
                 </div>
+
             </div>
+            <ol class="page swiper-pagination">
+            </ol>
+
         </section>
     </div>
     <script src="./js/common/jquery-1.8.3.min.js"></script>
+    <script src='./js/common/swiper-4.1.6.min.js'></script>
     <script src="./js/common/better-scroll.js"></script>
     <script>
         var scroll = new BScroll('.con', {
             scrollX: true,
             click: true
+        })
+        varswiper = new Swiper('.banner', {
+            autoplay: true,
+            loop: true,
+            pagination: {
+                el: '.page',
+                clickable: true
+            }
         })
     </script>
 </body>
