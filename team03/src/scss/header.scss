@@ -1,0 +1,18 @@
+@import "common.scss";
+@import "_minix.scss";
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    background: white;
+    overflow-x: hidden;
+    ul {
+        width: 1000px;
+        height: pxTorem(44px);
+        line-height: pxTorem(44px);
+        li {
+            padding: 0 pxTorem(10px);
+            @include sizing;
+            display: inline;
+        }
+    }
+}
