@@ -19,7 +19,38 @@ body {
 
 header {
     width: 100%;
-    height: 50px;
+    height: 60px;
+    overflow: hidden;
+    h3 {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        text-align: center;
+        color: #d57e90;
+    }
+    .scrolls {
+        width: 100%;
+        height: 30px;
+        .list {
+            width: 400px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            li {
+                flex: 1;
+                height: 100%;
+                font-size: 12px;
+                text-align: center;
+                line-height: 30px;
+                margin: 0 10px;
+            }
+            li.active {
+                color: #d57e90;
+                border-bottom: 2px solid #d57e90;
+            }
+        }
+    }
 }
 
 .con {
@@ -28,24 +59,41 @@ header {
     flex-direction: column;
     .top {
         width: 100%;
-        height: 100px;
+        height: 150px;
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            .swiper-wrapper {
+                width: 100%;
+                height: 100%;
+                .swiper-slide {
+                    text-align: center;
+                    font-size: 18px;
+                    background: #fff;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
     }
     .buttom {
         flex: 1;
         background: #eee;
         overflow-y: auto;
-        p{
+        p {
             width: 100%;
             text-align: center;
             line-height: 45px;
         }
-        .list{
+        .list {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             font-size: 14px;
-            dl{
+            dl {
                 width: 49%;
                 height: 200px;
                 background: #fff;
@@ -54,53 +102,53 @@ header {
                 box-sizing: border-box;
                 display: flex;
                 flex-direction: column;
-                dt{
+                dt {
                     width: 100%;
                     height: 60%;
                     text-align: center;
-                    img{
+                    img {
                         width: 100%;
                     }
                 }
-                dd{
+                dd {
                     width: 100%;
                     flex: 1;
                     display: flex;
                     flex-direction: column;
-                    p.title{
+                    p.title {
                         line-height: 30px;
                         width: 100%;
                         text-align: left;
-                        span{
+                        span {
                             margin-right: 5px;
                             padding: 0 5px;
                             border: 1px solid #ccc;
                         }
                     }
-                    .sentence{
+                    .sentence {
                         width: 100%;
                         height: 40%;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        p{
+                        p {
                             width: auto;
                             color: #f44336;
-                            b{
+                            b {
                                 font-size: 16px;
                             }
-                            span{
+                            span {
                                 color: #666;
                                 border: none;
                                 text-decoration: line-through;
                             }
                         }
-                        span{
+                        span {
                             color: #666;
                             border: 1px solid #ccc;
                         }
                     }
-                    p.coutent{
+                    p.coutent {
                         text-align: right;
                         flex: 1;
                         line-height: 20px;

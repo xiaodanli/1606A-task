@@ -6,17 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./libs/swiper-4.2.2.min.css">
     <link rel="stylesheet" href="./scss/index.css">
     <link rel="stylesheet" href="./fonts/iconfont.css">
 </head>
 
 <body>
     <div class="wrap">
-        <header>头部
+        <header class="header">
+            <h3>全场包邮 低至5元</h3>
+            <div class="scrolls">
+                <ul class="list">
+                    <li class="active">推荐</li>
+                    <li>女装</li>
+                    <li>美食</li>
+                    <li>居家</li>
+                    <li>美妆</li>
+                    <li>男装</li>
+                    <li>内衣</li>
+                    <li>鞋帽</li>
+                </ul>
+            </div>
+
         </header>
         <div class="con">
             <div class="top">
-                中上swiper
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./image/5.jpeg"></div>
+                        <div class="swiper-slide"><img src="./image/1.jpg"></div>
+                        <div class="swiper-slide"><img src="./image/2.jpg"></div>
+                        <div class="swiper-slide"><img src="./image/3.jpg"></div>
+                        <div class="swiper-slide"><img src="./image/4.jpg"></div>
+                        <div class="swiper-slide"><img src="./image/2.jpg"></div>
+                        <div class="swiper-slide"><img src="./image/5.jpeg"></div>
+                        <div class="swiper-slide"><img src="./image/4.jpg"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
             <div class="buttom">
                 <!--<p>-精选单品-</p>
@@ -26,15 +54,17 @@
                             <img src="image/1.jpg" alt="">
                         </dt>
                         <dd>
-                            <p class="title"><span>天猫</span>吧啦吧啦</p> 
+                            <p class="title"><span>天猫</span>吧啦吧啦</p>
                             <div class="sentence">
-                                <p>￥<b>12</b><span>￥4.3</span></p> 
+                                <p>￥<b>12</b><span>￥4.3</span></p>
                                 <span>卷减3元</span>
                             </div>
                             <p class="coutent">谨慎2天</p>
                         </dd>
                     </dl>      
                 </div> -->
+                    </dl>
+                </div>
             </div>
         </div>
         <footer>
@@ -66,7 +96,28 @@
 </body>
 <script src="libs/jquery.min.js"></script>
 <script src="js/index.js"></script>
+<script src="libs/swiper-4.2.2.min.js"></script>
+<script src="libs/better-scroll.js"></script>
 <script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+    new BScroll('.header>div', {
+        click: true,
+        scrollX: true
+    });
+    $('.list li').on('click', function() {
+        var ind = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+
+
+
+    });
 
     $.ajax({
         url:'./data/buttom.json',
