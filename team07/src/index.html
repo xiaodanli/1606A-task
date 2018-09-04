@@ -12,7 +12,21 @@
 
 <body>
     <div class="wrap">
-        <header>头部
+        <header class="header">
+            <h3>全场包邮 低至5元</h3>
+            <div class="scrolls">
+                <ul class="list">
+                    <li class="active">推荐</li>
+                    <li>女装</li>
+                    <li>美食</li>
+                    <li>居家</li>
+                    <li>美妆</li>
+                    <li>男装</li>
+                    <li>内衣</li>
+                    <li>鞋帽</li>
+                </ul>
+            </div>
+
         </header>
         <div class="con">
             <div class="top">
@@ -26,15 +40,15 @@
                             <img src="image/1.jpg" alt="">
                         </dt>
                         <dd>
-                            <p class="title"><span>天猫</span>吧啦吧啦</p> 
+                            <p class="title"><span>天猫</span>吧啦吧啦</p>
                             <div class="sentence">
-                                <p>￥<b>12</b><span>￥4.3</span></p> 
+                                <p>￥<b>12</b><span>￥4.3</span></p>
                                 <span>卷减3元</span>
                             </div>
                             <p class="coutent">谨慎2天</p>
                         </dd>
-                    </dl>      
-                </div> 
+                    </dl>
+                </div>
             </div>
         </div>
         <footer>
@@ -66,5 +80,16 @@
 </body>
 <script src="libs/jquery.min.js"></script>
 <script src="js/index.js"></script>
+<script src="libs/better-scroll.js"></script>
+<script>
+    new BScroll('.header>div', {
+        click: true,
+        scrollX: true
+    });
+    $('.list li').on('click', function() {
+        var ind = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+</script>
 
 </html>
