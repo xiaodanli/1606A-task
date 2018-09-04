@@ -1,0 +1,288 @@
+@mixin sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin absolute($direction) {
+    position: $direction;
+}
+
+@mixin height($height) {
+    height: $height;
+}
+
+@mixin hidden {
+    overflow: hidden;
+}
+
+@mixin center($center) {
+    text-align: $center;
+}
+
+@mixin box_flex {
+    display: flex;
+    display: -webkit-flex;
+}
+
+@mixin direction ($dir:row) {
+    -webkit-flex-direction: $dir;
+    flex-direction: $dir;
+}
+
+@mixin flexWrap ($wrap) {
+    -webkit-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+}
+
+@mixin flexFlow ($dir:row, $wrap:wrap) {
+    -webkit-flex-flow: $dir $wrap;
+    flex-flow: $dir $wrap;
+}
+
+@mixin justify ($justify:center) {
+    -webkit-justify-content: $justify;
+    justify-content: $justify;
+}
+
+@mixin align ($align:center) {
+    -webkit-align-items: $align;
+    align-items: $align;
+}
+
+@mixin flex ($grow: 1, $shrink: 1, $basis: 0%) {
+    -webkit-flex: $grow $shrink $basis;
+    flex: $grow $shrink $basis;
+}
+
+@mixin flex_grow($val) {
+    -webkit-flex-grow: $val;
+    flex-grow: $val;
+}
+
+@mixin flex_shrink($val) {
+    -webkit-flex-shrink: $val;
+    flex-shrink: $val;
+}
+
+@mixin flex_basis($val) {
+    -webkit-flex-basis: $val;
+    flex-basis: $val;
+}
+
+%text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin text1($n:2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $n;
+    -webkit-box-orient: vertical;
+}
+
+@mixin num($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    font-family: STHeitiSC-Light;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -webkit-text-size-adjust: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    font-family: arial, sans-serif;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+ins,
+a {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    display: inline-block;
+}
+
+input,
+textarea {
+    border: none;
+    background: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+    -o-tap-highlight-color: rgba(0, 0, 0, 0);
+    // tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+$browser-default-font-size: 37.5px !default;
+
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+
+@function pxTorem($px) {
+    //$px为需要转换的字号
+    @return $px / $browser-default-font-size * 1rem;
+}
+
+// pxTorem(10);
+//SCSS
+html {
+    font-size: $browser-default-font-size;
+}
