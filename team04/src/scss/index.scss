@@ -1,4 +1,31 @@
-* {
-    padding: 0;
-    margin: 0;
+@import "common.scss";
+@import "mixin.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include justify;
+    @include direction(column);
+}
+
+section {
+    @include flex;
+    width: 100%;
+    overflow-y: auto;
+    .swiper-container {
+        width: 100%;
+        height: pxTorem(150px);
+        .swiper-wrapper {
+            width: 100%;
+            height: 100%;
+            .swiper-slide {
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
 }
