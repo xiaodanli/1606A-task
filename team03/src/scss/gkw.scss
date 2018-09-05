@@ -1,0 +1,41 @@
+@import '_minix.scss';
+@import 'common.scss';
+section {
+    flex: 1;
+    .swiper {
+        width: 100%;
+        .banner {
+            width: 100%;
+            .top {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: pxTorem(10px) pxTorem(10px);
+                box-sizing: border-box;
+                span {
+                    font-size: pxTorem(15px);
+                }
+            }
+            .swiper-container {
+                width: 100%;
+                .swiper-wrapper {
+                    width: 100%;
+                    display: flex;
+                    .swiper-slide {
+                        width: 100%;
+                        flex-shrink: 0;
+                        display: flex;
+                        .jone {
+                            width: 32%;
+                            text-align: center;
+                            img {
+                                width: 80%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

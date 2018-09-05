@@ -6,13 +6,13 @@ var fs = require('fs');
 var url = require('url')
 
 gulp.task('sass', function() {
-    return gulp.src('./src/scss/*.scss')
+    return gulp.src('./team03/src/scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('./src/css/'))
+        .pipe(gulp.dest('./team03/src/css/'))
 })
 
 gulp.task('watch', function() {
-    return gulp.watch('./src/scss/*.scss', gulp.series('sass'))
+    return gulp.watch('./team03/src/scss/*.scss', gulp.series('sass'))
 })
 
 gulp.task('server', function() {
